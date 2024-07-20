@@ -1,1 +1,153 @@
+latifa@HostAdmin:~$ docker ps -a
+
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                      PORTS     NAMES
+
+9b97d0feb7ac   nginx          "/docker-entrypoint.…"   5 minutes ago   Exited (0) 5 minutes ago              ng3
+
+12da1222c873   nginx          "/docker-entrypoint.…"   5 minutes ago   Exited (0) 5 minutes ago              ng2
+
+b019a38053ea   nginx          "/docker-entrypoint.…"   5 minutes ago   Up 5 minutes                80/tcp    ng1
+
+c9ee3ffb18ac   nginx:alpine   "/docker-entrypoint.…"   4 months ago    Exited (128) 4 months ago             webserver
+
+latifa@HostAdmin:~$ docker image ls
+
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+
+ping-image   latest    7c87490975a3   5 months ago   9.78MB
+
+nginx        alpine    6913ed9ec8d0   5 months ago   42.6MB
+
+ubuntu       <none>    3db8720ecbf5   5 months ago   77.9MB
+
+alpine       latest    05455a08881e   5 months ago   7.38MB
+
+redis        latest    d1397258b209   6 months ago   138MB
+
+mysql        5.7       5107333e08a8   7 months ago   501MB
+
+ubuntu       latest    174c8c134b2a   7 months ago   77.9MB
+
+nginx        latest    d453dd892d93   8 months ago   187MB
+
+latifa@HostAdmin:~$ docker rmi 7c8 691 3db 054 d13 510 174 d45
+
+Untagged: ping-image:latest
+
+Deleted: sha256:7c87490975a39b846609ce010eb929c78150d6ce3d3702a8725ae343e682184d
+
+Untagged: ubuntu@sha256:f9d633ff6640178c2d0525017174a688e2c1aef28f0a0130b26bd5554491f0da
+
+Deleted: sha256:3db8720ecbf5f5927d409cc61f9b4f7ffe23283917caaa992f847c4d83338cc1
+
+Deleted: sha256:d101c9453715a978a2a520f553588e77dfb4236762175eba61c5c264a449c75d
+
+Untagged: alpine:latest
+
+Untagged: alpine@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b
+
+Deleted: sha256:05455a08881ea9cf0e752bc48e61bbd71a34c029bb13df01e40e3e70e0d007bd
+
+Untagged: redis:latest
+
+Untagged: redis@sha256:e647cfe134bf5e8e74e620f66346f93418acfc240b71dd85640325cb7cd01402
+
+Deleted: sha256:d1397258b209a60f90a4378c733b1a22184557b0694c9ff928127ca9e84a6643
+
+Deleted: sha256:e72710f344a26345efc3d8a6fb7608d4908493b36e8eac7d9d4ff0ec6542bb27
+
+Deleted: sha256:41c66e17d7d75e1341021caf4444e9feaf01e95bc68f8a28dbe1d8235a39bd6f
+
+Deleted: sha256:ab92b25b7b909f53814079d21a7d7bb57ae0961142c4f901239a1f02263ebb20
+
+Deleted: sha256:e94440ab0cc3b64fe1176b14f07262c863f27c495f2da7fab8855cac4d33fed9
+
+Deleted: sha256:4c19b7f01efc3b9ac4be5312149de4b6e5a457f8dd6d1e981f09b17f411c7403
+
+Deleted: sha256:95dee2f89066e6ceb4b8b20cea8dbcece56a1a8e7a3d2f1d3f887ce87bff1ff9
+
+Deleted: sha256:594b79c1a4663ef266568883cccbc9ce5c755a13745377aa033ef11a75dba5bb
+
+Deleted: sha256:ceb365432eec83dafc777cac5ee87737b093095035c89dd2eae01970c57b1d15
+
+Untagged: mysql:5.7
+
+Untagged: mysql@sha256:4bc6bc963e6d8443453676cae56536f4b8156d78bae03c0145cbe47c2aad73bb
+
+Deleted: sha256:5107333e08a87b836d48ff7528b1e84b9c86781cc9f1748bbc1b8c42a870d933
+
+Deleted: sha256:37fd5f1492d4e9cb540c52c26655f220568050438f804275e886200c8807ffb4
+
+Deleted: sha256:1105a50d3483cb9f970e70cf5163e3352f0b2fe2ff07c6abcca6f34228e76dc5
+
+Deleted: sha256:94187496c18bb11b78e71017f2774ad3c0a734da9749a46e917c4239504e9322
+
+Deleted: sha256:ae59716eae3be604a4fd43e86fd2ad504cb06c89cc064c73c78eee651e675805
+
+Deleted: sha256:97d26ca29ec287ff4bd09a49602c44cbcabcf3303ddc726b3b94cbe26dfe1c94
+
+Deleted: sha256:27303974d12144264b32b8936ca7c90d72bdba939a9e791010201b3b1717c4c4
+
+Deleted: sha256:4d4483f06dbe01282c10cb9e429a0be826c18c61048f7860dad49ae7f6bac927
+
+Deleted: sha256:3b73a6f6b3298c568dcfb8fa5e96c581a1b5c0ad395b0c38f9addd0c79703124
+
+Deleted: sha256:46446bf265a411a4a13a4adc86f60c9e0479a2e03273c98cafab7bc4151dd2bc
+
+Deleted: sha256:1d5264146b09a27a8fc6801dc239a4962582ed27dd2fbd8ee708463a1857b06b
+
+Deleted: sha256:cff044e186247f93aa52554c96d77143cc92f99b2b55914038d0941fddeb6623
+
+Untagged: ubuntu:latest
+
+Untagged: ubuntu@sha256:6042500cf4b44023ea1894effe7890666b0c5c7871ed83a97c36c76ae560bb9b
+
+Deleted: sha256:174c8c134b2a94b5bb0b37d9a2b6ba0663d82d23ebf62bd51f74a2fd457333da
+
+Error response from daemon: conflict: unable to delete 6913ed9ec8d0 (must be forced) - image is being used by stopped container c9ee3ffb18ac
+
+Error response from daemon: conflict: unable to delete d453dd892d93 (cannot be forced) - image is being used by running container b019a38053ea
+
+latifa@HostAdmin:~$ docker ps -a
+
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                      PORTS     NAMES
+
+9b97d0feb7ac   nginx          "/docker-entrypoint.…"   7 minutes ago   Exited (0) 7 minutes ago              ng3
+
+12da1222c873   nginx          "/docker-entrypoint.…"   7 minutes ago   Exited (0) 6 minutes ago              ng2
+
+b019a38053ea   nginx          "/docker-entrypoint.…"   7 minutes ago   Up 7 minutes                80/tcp    ng1
+
+c9ee3ffb18ac   nginx:alpine   "/docker-entrypoint.…"   4 months ago    Exited (128) 4 months ago             webserver
+
+latifa@HostAdmin:~$ docker stop 9b9 12d b019 c9ee
+
+9b9
+
+12d
+
+b019
+
+c9ee
+
+latifa@HostAdmin:~$ docker rmi d54
+
+*Error response from daemon: No such image: d54:latest
+
+latifa@HostAdmin:~$ docker rmi d45
+
+Error response from daemon: conflict: unable to delete d453dd892d93 (must be forced) - image is being used by stopped container b019a38053ea
+
+latifa@HostAdmin:~$ docker ps -a
+
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                      PORTS     NAMES
+
+9b97d0feb7ac   nginx          "/docker-entrypoint.…"   8 minutes ago   Exited (0) 8 minutes ago              ng3
+
+12da1222c873   nginx          "/docker-entrypoint.…"   8 minutes ago   Exited (0) 8 minutes ago              ng2
+
+b019a38053ea   nginx          "/docker-entrypoint.…"   8 minutes ago   Exited (0) 39 seconds ago             ng1
+
+c9ee3ffb18ac   nginx:alpine   "/docker-entrypoint.…"   4 months ago    Exited (128) 4 months ago             webserver
+
 
