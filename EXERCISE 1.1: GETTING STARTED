@@ -1,1 +1,39 @@
+latifa@HostAdmin:~$ docker run -d --name ng1 nginx
+
+b019a38053ea0af9186469ea0089e9f9d78d2c193d5bcec0e6640881034772b9
+
+latifa@HostAdmin:~$ docker run -d --name ng2 nginx
+
+12da1222c87319e396e9ce8d8d82adaca16b205f38fd62a3640a78066296df16
+
+latifa@HostAdmin:~$ docker run -d --name ng3 nginx
+
+9b97d0feb7ac66e24217d748eff278767c77b567929d66db2dbb8a56b2c3b4f8
+
+latifa@HostAdmin:~$ docker stop 9b9
+
+9b9
+
+latifa@HostAdmin:~$ docker stop 12d
+
+12d
+
+latifa@HostAdmin:~$ docker ps
+
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+
+b019a38053ea   nginx     "/docker-entrypoint.…"   49 seconds ago   Up 47 seconds   80/tcp    ng1
+
+latifa@HostAdmin:~$ docker ps   -a
+
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                      PORTS     NAMES
+
+9b97d0feb7ac   nginx          "/docker-entrypoint.…"   50 seconds ago       Exited (0) 30 seconds ago             ng3
+
+12da1222c873   nginx          "/docker-entrypoint.…"   55 seconds ago       Exited (0) 17 seconds ago             ng2
+
+b019a38053ea   nginx          "/docker-entrypoint.…"   About a minute ago   Up About a minute           80/tcp    ng1
+
+c9ee3ffb18ac   nginx:alpine   "/docker-entrypoint.…"   4 months ago         Exited (128) 4 months ago             webserver
+
 
